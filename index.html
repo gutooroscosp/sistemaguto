@@ -301,8 +301,8 @@
             generateButton.disabled = true;
             magicButton.disabled = true;
 
-            const apiKey = "";
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image-preview:generateContent?key=${apiKey}`;
+            // Altere esta URL para o endereço do seu servidor proxy
+            const apiUrl = 'https://seu-servidor-proxy.com/api/generate-image';
 
             const parts = [{ text: prompt }];
             parts.push({
@@ -361,7 +361,7 @@
                         await new Promise(res => setTimeout(res, delay));
                         return await fetchWithExponentialBackoff();
                     } else {
-                        showMessage(`Erro ao gerar a imagem: ${error.message}. Tente novamente ou verifique as políticas de segurança do seu navegador/rede.`);
+                        showMessage(`Erro ao gerar a imagem: ${error.message}. Este erro pode ser causado por um problema de conexão ou pelas políticas de segurança do seu navegador/rede.`);
                         console.error("Erro completo:", error);
                     }
                 } finally {
@@ -428,8 +428,8 @@
             const systemPrompt = "Você é um professor de português e gramática brasileiro. Corrija o texto fornecido pelo usuário, focando na ortografia, gramática e nas melhores práticas da norma culta brasileira. Mantenha o conteúdo e a estrutura originais, alterando apenas o que for necessário para a correção. Não inclua comentários adicionais ou explicações sobre as correções, apenas forneça o texto corrigido.";
             const userQuery = `Corrija o seguinte texto:\n\n"${text}"`;
             
-            const apiKey = "";
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+            // Altere esta URL para o endereço do seu servidor proxy
+            const apiUrl = 'https://seu-servidor-proxy.com/api/correct-text';
 
             const payload = {
                 contents: [{ parts: [{ text: userQuery }] }],
@@ -468,7 +468,7 @@
                         await new Promise(res => setTimeout(res, delay));
                         return await fetchWithExponentialBackoff();
                     } else {
-                        showMessageText(`Erro ao corrigir o texto: ${error.message}. Tente novamente ou verifique as políticas de segurança do seu navegador/rede.`);
+                        showMessageText(`Erro ao corrigir o texto: ${error.message}. Este erro pode ser causado por um problema de conexão ou pelas políticas de segurança do seu navegador/rede.`);
                         console.error("Erro completo:", error);
                     }
                 } finally {
@@ -522,8 +522,8 @@
             const systemPrompt = "Você é um professor de marketing com mais de 30 anos de mercado, focado em comércio e especializado em vendas e mídias sociais. Produza um texto de alta qualidade, relevante e atraente, focado no prompt do usuário.";
             const userQuery = `Produza o seguinte texto de marketing:\n\n"${text}"`;
             
-            const apiKey = "";
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+            // Altere esta URL para o endereço do seu servidor proxy
+            const apiUrl = 'https://seu-servidor-proxy.com/api/create-marketing-text';
 
             const payload = {
                 contents: [{ parts: [{ text: userQuery }] }],
@@ -643,8 +643,8 @@
             enhanceLogoButton.disabled = true;
             fontButton.disabled = true;
 
-            const apiKey = "";
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image-preview:generateContent?key=${apiKey}`;
+            // Altere esta URL para o endereço do seu servidor proxy
+            const apiUrl = 'https://seu-servidor-proxy.com/api/process-logo-image';
 
             const parts = [
                 { text: prompt },
@@ -725,8 +725,8 @@
             enhanceLogoButton.disabled = true;
             fontButton.disabled = true;
 
-            const apiKey = "";
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image-preview:generateContent?key=${apiKey}`;
+            // Altere esta URL para o endereço do seu servidor proxy
+            const apiUrl = 'https://seu-servidor-proxy.com/api/process-logo-text';
 
             const parts = [
                 { text: prompt },
@@ -841,8 +841,8 @@
             const systemPrompt = "Você é um assistente de busca de músicas. Crie uma lista de 5 músicas fictícias sem direitos autorais com títulos e artistas baseados no estilo fornecido. Para cada música, forneça um link de busca simulado. Formato: 'Título da Música' - 'Artista' - link de busca. Responda apenas com a lista, um título, artista e link por linha. Use como base a busca por músicas em plataformas como o Pixabay. Exemplo: Título - Artista - https://pixabay.com/music/search/rock";
             const userQuery = `Gere uma lista de músicas para o estilo: "${style}"`;
             
-            const apiKey = "";
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+            // Altere esta URL para o endereço do seu servidor proxy
+            const apiUrl = 'https://seu-servidor-proxy.com/api/search-music';
 
             const payload = {
                 contents: [{ parts: [{ text: userQuery }] }],
